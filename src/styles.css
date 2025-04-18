@@ -274,6 +274,11 @@ body {
   transform: scale(1.05);
 }
 /* Responsive for tablets and smaller */
+@media (max-width: 768px) {
+  .chat-header h1 {
+    font-size: 28px;
+  }
+}
 @media (max-width: 480px) {
   body {
     padding: 0;
@@ -297,6 +302,11 @@ body {
     font-weight: bold;
     background: #1f1f1f;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .chat-header h1 {
+    font-size: 20px;
+    align-items: center;
+    padding-left: 50px;
   }
 
   .chat-messages {
@@ -358,14 +368,13 @@ body {
   .sidebar {
     position: fixed;
     top: 0;
-    left: -100%; /* Hide sidebar off-screen */
+    left: -100%;
+    width: 200px;
     height: 100%;
-    width: 75%;
-    max-width: 260px;
-    background: #111;
-    padding: 20px;
+    background-color: #1a1a1a;
+    padding: 25px 15px;
     transition: left 0.3s ease;
-    z-index: 1000;
+    z-index: 999;
   }
   .sidebar.active {
     left: 0; /* Slide in when active */
